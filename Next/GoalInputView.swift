@@ -53,7 +53,7 @@ struct GoalInputView: View {
                 isTextFieldFocused = true
             }
         }
-        .onChange(of: voiceService.transcribedText) { newValue in
+        .onChange(of: voiceService.transcribedText) { oldValue, newValue in
             if !newValue.isEmpty {
                 state.goalInputText = newValue
             }

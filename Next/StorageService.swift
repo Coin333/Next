@@ -87,27 +87,27 @@ class StorageService {
     
     // MARK: - Tasks
     
-    func saveTasks(_ tasks: [Task]) {
+    func saveTasks(_ tasks: [NextTask]) {
         if let encoded = try? encoder.encode(tasks) {
             defaults.set(encoded, forKey: Keys.tasks)
         }
     }
     
-    func loadTasks() -> [Task] {
+    func loadTasks() -> [NextTask] {
         guard let data = defaults.data(forKey: Keys.tasks),
-              let tasks = try? decoder.decode([Task].self, from: data) else {
+              let tasks = try? decoder.decode([NextTask].self, from: data) else {
             return []
         }
         return tasks
     }
     
-    func addTasks(_ newTasks: [Task]) {
+    func addTasks(_ newTasks: [NextTask]) {
         var tasks = loadTasks()
         tasks.append(contentsOf: newTasks)
         saveTasks(tasks)
     }
     
-    func updateTask(_ task: Task) {
+    func updateTask(_ task: NextTask) {
         var tasks = loadTasks()
         if let index = tasks.firstIndex(where: { $0.id == task.id }) {
             tasks[index] = task
@@ -121,11 +121,11 @@ class StorageService {
         saveTasks(tasks)
     }
     
-    func getTasksForGoal(_ goalId: UUID) -> [Task] {
+    func getTasksForGoal(_ goalId: UUID) -> [NextTask] {
         return loadTasks().filter { $0.goalId == goalId }
     }
     
-    func getPendingTasks() -> [Task] {
+    func getPendingTasks() -> [NextTask] {
         return loadTasks().filter { $0.status == .pending }
     }
     

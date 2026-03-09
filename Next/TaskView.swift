@@ -134,7 +134,7 @@ struct TaskView: View {
 // MARK: - Preview
 #Preview {
     let state = NextState()
-    state.currentTask = Task(
+    state.currentTask = NextTask(
         goalId: UUID(),
         title: "Write 3 bullet points for your essay",
         estimatedMinutes: 20,

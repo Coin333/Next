@@ -423,8 +423,8 @@ struct TaskTemplate {
     let difficulty: DifficultyLevel
     let shrunkVersions: [String]
     
-    func toTask(goalId: UUID) -> Task {
-        return Task(
+    func toTask(goalId: UUID) -> NextTask {
+        return NextTask(
             goalId: goalId,
             title: title,
             estimatedMinutes: estimatedMinutes,

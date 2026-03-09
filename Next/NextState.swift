@@ -20,10 +20,10 @@ class NextState: ObservableObject {
     @Published var goals: [Goal] = []
     
     /// All tasks
-    @Published var tasks: [Task] = []
+    @Published var tasks: [NextTask] = []
     
     /// The current task to display (the "Next" task)
-    @Published var currentTask: Task?
+    @Published var currentTask: NextTask?
     
     /// Whether we're showing the goal input sheet
     @Published var showingGoalInput: Bool = false
@@ -96,7 +96,7 @@ class NextState: ObservableObject {
     // MARK: - Task Selection Algorithm
     
     /// Gets the next pending task based on priority
-    func getNextPendingTask() -> Task? {
+    func getNextPendingTask() -> NextTask? {
         let pendingTasks = tasks.filter { $0.status == .pending }
         
         guard !pendingTasks.isEmpty else { return nil }
@@ -264,7 +264,7 @@ class NextState: ObservableObject {
         let taskTemplates = sage.decomposeGoal(trimmedGoal, energyLevel: user.energyLevel)
         
         // Convert templates to tasks
-        var newTasks: [Task] = []
+        var newTasks: [NextTask] = []
         var taskIds: [UUID] = []
         
         for template in taskTemplates {

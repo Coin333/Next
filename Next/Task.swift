@@ -73,7 +73,7 @@ enum DifficultyLevel: Int, Codable, CaseIterable {
 }
 
 // MARK: - Task Model
-struct Task: Identifiable, Codable, Equatable {
+struct NextTask: Identifiable, Codable, Equatable {
     let id: UUID
     let goalId: UUID
     var title: String
@@ -162,7 +162,7 @@ struct Task: Identifiable, Codable, Equatable {
         status = .skipped
     }
     
-    static func == (lhs: Task, rhs: Task) -> Bool {
+    static func == (lhs: NextTask, rhs: NextTask) -> Bool {
         lhs.id == rhs.id
     }
 }
