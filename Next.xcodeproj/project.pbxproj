@@ -23,6 +23,23 @@
 		C27427322F591F0A00D09115 /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427332F591F0A00D09115 /* ReflectionView.swift */; };
 		C27427342F591F0B00D09115 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427352F591F0B00D09115 /* EmptyStateView.swift */; };
 		C27427362F591F0C00D09115 /* VoiceInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427372F591F0C00D09115 /* VoiceInputService.swift */; };
+		C27427382F591F0D00D09115 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427392F591F0D00D09115 /* ConversationManager.swift */; };
+		C274273A2F591F0E00D09115 /* ConversationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274273B2F591F0E00D09115 /* ConversationState.swift */; };
+		C274273C2F591F0F00D09115 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274273D2F591F0F00D09115 /* Goal.swift */; };
+		C274273E2F591F1000D09115 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274273F2F591F1000D09115 /* KeychainManager.swift */; };
+		C27427402F591F1100D09115 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427412F591F1100D09115 /* Logger.swift */; };
+		C27427422F591F1200D09115 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427432F591F1200D09115 /* MainView.swift */; };
+		C27427442F591F1300D09115 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427452F591F1300D09115 /* MainViewModel.swift */; };
+		C27427462F591F1400D09115 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427472F591F1400D09115 /* NetworkMonitor.swift */; };
+		C27427482F591F1500D09115 /* PromptBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427492F591F1500D09115 /* PromptBuilder.swift */; };
+		C274274A2F591F1600D09115 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274274B2F591F1600D09115 /* ResponseParser.swift */; };
+		C274274C2F591F1700D09115 /* SageAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274274D2F591F1700D09115 /* SageAPIManager.swift */; };
+		C274274E2F591F1800D09115 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274274F2F591F1800D09115 /* SettingsView.swift */; };
+		C27427502F591F1900D09115 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427512F591F1900D09115 /* SpeechRecognizer.swift */; };
+		C27427522F591F1A00D09115 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427532F591F1A00D09115 /* SpeechSynthesizer.swift */; };
+		C27427542F591F1B00D09115 /* TaskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427552F591F1B00D09115 /* TaskEngine.swift */; };
+		C27427562F591F1C00D09115 /* VoiceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427572F591F1C00D09115 /* VoiceEngine.swift */; };
+		C27427582F591F1D00D09115 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427592F591F1D00D09115 /* VoiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +60,23 @@
 		C27427332F591F0A00D09115 /* ReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionView.swift; sourceTree = "<group>"; };
 		C27427352F591F0B00D09115 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		C27427372F591F0C00D09115 /* VoiceInputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInputService.swift; sourceTree = "<group>"; };
+		C27427392F591F0D00D09115 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
+		C274273B2F591F0E00D09115 /* ConversationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationState.swift; sourceTree = "<group>"; };
+		C274273D2F591F0F00D09115 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		C274273F2F591F1000D09115 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		C27427412F591F1100D09115 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		C27427432F591F1200D09115 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C27427452F591F1300D09115 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C27427472F591F1400D09115 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		C27427492F591F1500D09115 /* PromptBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptBuilder.swift; sourceTree = "<group>"; };
+		C274274B2F591F1600D09115 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		C274274D2F591F1700D09115 /* SageAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SageAPIManager.swift; sourceTree = "<group>"; };
+		C274274F2F591F1800D09115 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C27427512F591F1900D09115 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		C27427532F591F1A00D09115 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		C27427552F591F1B00D09115 /* TaskEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEngine.swift; sourceTree = "<group>"; };
+		C27427572F591F1C00D09115 /* VoiceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceEngine.swift; sourceTree = "<group>"; };
+		C27427592F591F1D00D09115 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +123,23 @@
 				C27427332F591F0A00D09115 /* ReflectionView.swift */,
 				C27427352F591F0B00D09115 /* EmptyStateView.swift */,
 				C27427372F591F0C00D09115 /* VoiceInputService.swift */,
+				C27427392F591F0D00D09115 /* ConversationManager.swift */,
+				C274273B2F591F0E00D09115 /* ConversationState.swift */,
+				C274273D2F591F0F00D09115 /* Goal.swift */,
+				C274273F2F591F1000D09115 /* KeychainManager.swift */,
+				C27427412F591F1100D09115 /* Logger.swift */,
+				C27427432F591F1200D09115 /* MainView.swift */,
+				C27427452F591F1300D09115 /* MainViewModel.swift */,
+				C27427472F591F1400D09115 /* NetworkMonitor.swift */,
+				C27427492F591F1500D09115 /* PromptBuilder.swift */,
+				C274274B2F591F1600D09115 /* ResponseParser.swift */,
+				C274274D2F591F1700D09115 /* SageAPIManager.swift */,
+				C274274F2F591F1800D09115 /* SettingsView.swift */,
+				C27427512F591F1900D09115 /* SpeechRecognizer.swift */,
+				C27427532F591F1A00D09115 /* SpeechSynthesizer.swift */,
+				C27427552F591F1B00D09115 /* TaskEngine.swift */,
+				C27427572F591F1C00D09115 /* VoiceEngine.swift */,
+				C27427592F591F1D00D09115 /* VoiceView.swift */,
 				C27427162F591E9500D09115 /* Assets.xcassets */,
 				C27427182F591E9500D09115 /* Preview Content */,
 			);
@@ -187,6 +238,23 @@
 				C27427322F591F0A00D09115 /* ReflectionView.swift in Sources */,
 				C27427342F591F0B00D09115 /* EmptyStateView.swift in Sources */,
 				C27427362F591F0C00D09115 /* VoiceInputService.swift in Sources */,
+				C27427382F591F0D00D09115 /* ConversationManager.swift in Sources */,
+				C274273A2F591F0E00D09115 /* ConversationState.swift in Sources */,
+				C274273C2F591F0F00D09115 /* Goal.swift in Sources */,
+				C274273E2F591F1000D09115 /* KeychainManager.swift in Sources */,
+				C27427402F591F1100D09115 /* Logger.swift in Sources */,
+				C27427422F591F1200D09115 /* MainView.swift in Sources */,
+				C27427442F591F1300D09115 /* MainViewModel.swift in Sources */,
+				C27427462F591F1400D09115 /* NetworkMonitor.swift in Sources */,
+				C27427482F591F1500D09115 /* PromptBuilder.swift in Sources */,
+				C274274A2F591F1600D09115 /* ResponseParser.swift in Sources */,
+				C274274C2F591F1700D09115 /* SageAPIManager.swift in Sources */,
+				C274274E2F591F1800D09115 /* SettingsView.swift in Sources */,
+				C27427502F591F1900D09115 /* SpeechRecognizer.swift in Sources */,
+				C27427522F591F1A00D09115 /* SpeechSynthesizer.swift in Sources */,
+				C27427542F591F1B00D09115 /* TaskEngine.swift in Sources */,
+				C27427562F591F1C00D09115 /* VoiceEngine.swift in Sources */,
+				C27427582F591F1D00D09115 /* VoiceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
