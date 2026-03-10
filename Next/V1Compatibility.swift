@@ -127,28 +127,6 @@ struct DailySummary {
     }
 }
 
-// MARK: - Task Template
-/// Template for generating tasks from goals (v1)
-struct TaskTemplate {
-    let title: String
-    let estimatedMinutes: Int
-    let difficulty: DifficultyLevel
-    let shrunkVersions: [String]
-    
-    func toTask(goalId: UUID) -> NextTask {
-        return NextTask(
-            id: UUID(),
-            title: title,
-            description: nil,
-            estimatedMinutes: estimatedMinutes,
-            status: .pending,
-            goalId: goalId,
-            order: 0,
-            sageMessage: nil
-        )
-    }
-}
-
 // MARK: - SageTask Extensions for V1 Compatibility
 extension SageTask {
     /// V1-compatible initializer with difficultyLevel
