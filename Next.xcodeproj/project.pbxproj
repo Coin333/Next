@@ -40,6 +40,7 @@
 		C27427542F591F1B00D09115 /* TaskEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427552F591F1B00D09115 /* TaskEngine.swift */; };
 		C27427562F591F1C00D09115 /* VoiceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427572F591F1C00D09115 /* VoiceEngine.swift */; };
 		C27427582F591F1D00D09115 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27427592F591F1D00D09115 /* VoiceView.swift */; };
+		C274275A2F591F1E00D09115 /* V1Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274275B2F591F1E00D09115 /* V1Compatibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		C27427552F591F1B00D09115 /* TaskEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEngine.swift; sourceTree = "<group>"; };
 		C27427572F591F1C00D09115 /* VoiceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceEngine.swift; sourceTree = "<group>"; };
 		C27427592F591F1D00D09115 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
+		C274275B2F591F1E00D09115 /* V1Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V1Compatibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				C27427552F591F1B00D09115 /* TaskEngine.swift */,
 				C27427572F591F1C00D09115 /* VoiceEngine.swift */,
 				C27427592F591F1D00D09115 /* VoiceView.swift */,
+				C274275B2F591F1E00D09115 /* V1Compatibility.swift */,
 				C27427162F591E9500D09115 /* Assets.xcassets */,
 				C27427182F591E9500D09115 /* Preview Content */,
 			);
@@ -255,6 +258,7 @@
 				C27427542F591F1B00D09115 /* TaskEngine.swift in Sources */,
 				C27427562F591F1C00D09115 /* VoiceEngine.swift in Sources */,
 				C27427582F591F1D00D09115 /* VoiceView.swift in Sources */,
+				C274275A2F591F1E00D09115 /* V1Compatibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

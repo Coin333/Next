@@ -320,14 +320,6 @@ struct VoiceButton: View {
     }
 }
 
-// MARK: - Color Extensions
-
-extension Color {
-    static let background = Color(uiColor: UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.0))
-    static let cardBackground = Color(uiColor: UIColor(red: 0.16, green: 0.16, blue: 0.18, alpha: 1.0))
-    static let accent = Color(uiColor: UIColor(red: 0.56, green: 0.69, blue: 0.60, alpha: 1.0))
-}
-
 // MARK: - Preview
 
 #Preview {

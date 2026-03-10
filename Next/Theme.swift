@@ -82,6 +82,16 @@ extension Color {
             opacity: Double(a) / 255
         )
     }
+    
+    // MARK: - Static Color Properties
+    /// Background color for views
+    static let background = Theme.Colors.background
+    
+    /// Card/surface background color
+    static let cardBackground = Theme.Colors.cardBackground
+    
+    /// Accent color (sage green)
+    static let accent = Theme.Colors.accent
 }
 
 // MARK: - View Modifiers
