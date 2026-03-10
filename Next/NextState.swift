@@ -164,7 +164,9 @@ class NextState: ObservableObject {
         storage.saveUser(user)
         
         // Check if all tasks for this goal are complete
-        checkGoalCompletion(for: task.goalId)
+        if let goalId = task.goalId {
+            checkGoalCompletion(for: goalId)
+        }
         
         // Show completion animation
         showCompletionAnimation = true
