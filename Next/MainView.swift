@@ -10,7 +10,7 @@ struct MainView: View {
     var body: some View {
         ZStack {
             // Background
-            Color.background
+            Theme.Colors.background
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
@@ -118,7 +118,7 @@ struct MainView: View {
                 .multilineTextAlignment(.leading)
         }
         .padding()
-        .background(Color.cardBackground)
+        .background(Theme.Colors.cardBackground)
         .cornerRadius(16)
     }
     
@@ -161,11 +161,11 @@ struct MainView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.cardBackground)
+        .background(Theme.Colors.cardBackground)
         .cornerRadius(16)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.accent.opacity(0.3), lineWidth: 1)
+                .stroke(Theme.Colors.accent.opacity(0.3), lineWidth: 1)
         )
     }
     
@@ -177,7 +177,7 @@ struct MainView: View {
             .foregroundColor(.secondary)
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.cardBackground.opacity(0.5))
+            .background(Theme.Colors.cardBackground.opacity(0.5))
             .cornerRadius(12)
     }
     
@@ -200,7 +200,7 @@ struct MainView: View {
         HStack(spacing: 3) {
             ForEach(0..<3, id: \.self) { index in
                 Circle()
-                    .fill(Color.accent)
+                    .fill(Theme.Colors.accent)
                     .frame(width: 4, height: 4)
                     .scaleEffect(viewModel.voiceState == .speaking ? 1.0 : 0.5)
                     .animation(
@@ -240,7 +240,7 @@ struct MainView: View {
     private var audioLevelIndicator: some View {
         GeometryReader { geometry in
             RoundedRectangle(cornerRadius: 2)
-                .fill(Color.accent)
+                .fill(Theme.Colors.accent)
                 .frame(width: geometry.size.width * CGFloat(viewModel.audioLevel), height: 4)
                 .animation(.easeOut(duration: 0.05), value: viewModel.audioLevel)
         }

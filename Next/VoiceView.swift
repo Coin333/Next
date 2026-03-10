@@ -11,7 +11,7 @@ struct VoiceView: View {
     var body: some View {
         ZStack {
             // Background
-            Color.background
+            Theme.Colors.background
                 .ignoresSafeArea()
             
             VStack(spacing: 40) {
@@ -45,7 +45,7 @@ struct VoiceView: View {
             // Outer pulsing rings
             ForEach(0..<3, id: \.self) { index in
                 Circle()
-                    .stroke(Color.accent.opacity(0.2), lineWidth: 2)
+                    .stroke(Theme.Colors.accent.opacity(0.2), lineWidth: 2)
                     .frame(width: 160 + CGFloat(index * 40), height: 160 + CGFloat(index * 40))
                     .scaleEffect(viewModel.voiceState == .listening ? 1.1 : 1.0)
                     .animation(
@@ -59,7 +59,7 @@ struct VoiceView: View {
             // Audio level ring
             if viewModel.voiceState == .listening {
                 Circle()
-                    .stroke(Color.accent, lineWidth: 4)
+                    .stroke(Theme.Colors.accent, lineWidth: 4)
                     .frame(width: 150, height: 150)
                     .scaleEffect(1.0 + CGFloat(viewModel.audioLevel) * 0.2)
                     .animation(.easeOut(duration: 0.05), value: viewModel.audioLevel)

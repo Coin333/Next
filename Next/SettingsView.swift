@@ -11,7 +11,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.background
+                Theme.Colors.background
                     .ignoresSafeArea()
                 
                 ScrollView {
@@ -69,7 +69,7 @@ struct SettingsView: View {
                     .foregroundColor(.red)
                 }
                 .padding()
-                .background(Color.cardBackground)
+                .background(Theme.Colors.cardBackground)
                 .cornerRadius(12)
             } else {
                 // Input field
@@ -81,7 +81,7 @@ struct SettingsView: View {
                     SecureField("sk-...", text: $viewModel.apiKeyInput)
                         .textFieldStyle(.plain)
                         .padding()
-                        .background(Color.cardBackground)
+                        .background(Theme.Colors.cardBackground)
                         .cornerRadius(12)
                         .focused($isAPIKeyFocused)
                         .autocorrectionDisabled()
@@ -92,7 +92,7 @@ struct SettingsView: View {
                             .fontWeight(.medium)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(viewModel.apiKeyInput.isEmpty ? Color.gray : Color.accent)
+                            .background(viewModel.apiKeyInput.isEmpty ? Color.gray : Theme.Colors.accent)
                             .foregroundColor(.white)
                             .cornerRadius(12)
                     }
@@ -155,7 +155,7 @@ struct SettingsView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.cardBackground)
+            .background(Theme.Colors.cardBackground)
             .cornerRadius(12)
         }
     }
