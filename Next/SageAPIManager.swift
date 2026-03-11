@@ -98,6 +98,11 @@ final class SageAPIManager {
             
             // Handle error status codes
             if httpResponse.statusCode != 200 {
+                #if DEBUG
+                if let responseString = String(data: data, encoding: .utf8) {
+                    print("API Error Response: \(responseString)")
+                }
+                #endif
                 if let errorResponse = try? decoder.decode(APIErrorResponse.self, from: data) {
                     throw APIError.apiError(message: errorResponse.error.message)
                 }
@@ -105,6 +110,12 @@ final class SageAPIManager {
             }
             
             // Parse response
+            #if DEBUG
+            if let responseString = String(data: data, encoding: .utf8) {
+                print("API Response: \(responseString.prefix(500))")
+            }
+            #endif
+            
             let apiResponse = try decoder.decode(APIResponse.self, from: data)
             
             guard let content = apiResponse.choices.first?.message.content else {

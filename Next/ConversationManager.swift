@@ -320,8 +320,19 @@ final class ConversationManager: ObservableObject {
         
         if let apiError = error as? SageAPIManager.APIError {
             userMessage = apiError.userMessage
+            #if DEBUG
+            print("API Error: \(apiError.errorDescription ?? "unknown")")
+            #endif
+        } else if let parsingError = error as? ResponseParser.ParsingError {
+            userMessage = "I had trouble understanding the response. Let's try again."
+            #if DEBUG
+            print("Parsing Error: \(parsingError.errorDescription ?? "unknown")")
+            #endif
         } else {
             userMessage = "Something went wrong. Let's try that again."
+            #if DEBUG
+            print("Unknown Error: \(error.localizedDescription)")
+            #endif
         }
         
         DispatchQueue.main.async {
