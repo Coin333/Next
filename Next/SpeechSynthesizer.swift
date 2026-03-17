@@ -89,7 +89,7 @@ final class SpeechSynthesizer: NSObject, ObservableObject {
         
         // Speak
         synthesizer.speak(utterance)
-        Logger.shared.logSpeechSynthesis(event: "Started speaking: \(text.prefix(50))...")
+        Logger.shared.info("Started speaking: \(text.prefix(50))...")
     }
     
     /// Stops current speech immediately
@@ -102,19 +102,19 @@ final class SpeechSynthesizer: NSObject, ObservableObject {
         }
         
         completionHandler = nil
-        Logger.shared.logSpeechSynthesis(event: "Stopped speaking")
+        Logger.shared.info("Stopped speaking")
     }
     
     /// Pauses current speech
     func pause() {
         synthesizer.pauseSpeaking(at: .word)
-        Logger.shared.logSpeechSynthesis(event: "Paused speaking")
+        Logger.shared.info("Paused speaking")
     }
     
     /// Continues paused speech
     func continueSpeaking() {
         synthesizer.continueSpeaking()
-        Logger.shared.logSpeechSynthesis(event: "Continued speaking")
+        Logger.shared.info("Continued speaking")
     }
     
     // MARK: - Voice Selection

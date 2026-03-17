@@ -49,13 +49,13 @@ final class SpeechRecognizer: NSObject, ObservableObject {
     /// Checks and requests authorization for speech recognition
     func checkAuthorization() {
         // Request microphone permission
-        AVAudioApplication.requestRecordPermission { [weak self] micGranted in
+        AVAudioSession.sharedInstance().requestRecordPermission { [weak self] micGranted in
             guard micGranted else {
                 DispatchQueue.main.async {
                     self?.isAuthorized = false
                     self?.error = .microphoneNotAuthorized
                 }
-                Logger.shared.logSpeechRecognition(event: "Microphone permission denied")
+                Logger.shared.error("Microphone permission denied")
                 return
             }
             
@@ -66,7 +66,7 @@ final class SpeechRecognizer: NSObject, ObservableObject {
                     case .authorized:
                         self?.isAuthorized = true
                         self?.error = nil
-                        Logger.shared.logSpeechRecognition(event: "Speech recognition authorized")
+                        Logger.shared.info("Speech recognition authorized")
                     case .denied:
                         self?.isAuthorized = false
                         self?.error = .speechRecognitionNotAuthorized
@@ -119,7 +119,7 @@ final class SpeechRecognizer: NSObject, ObservableObject {
             DispatchQueue.main.async {
                 self.error = .audioSessionError
             }
-            Logger.shared.error("Audio session error: \(error.localizedDescription)")
+            Logger.shared.info("Audio session error: \(error.localizedDescription)")
             return
         }
         
@@ -171,7 +171,7 @@ final class SpeechRecognizer: NSObject, ObservableObject {
                 self.isListening = true
             }
             onListeningStarted?()
-            Logger.shared.logSpeechRecognition(event: "Started listening")
+            Logger.shared.info("Started listening")
         } catch {
             DispatchQueue.main.async {
                 self.error = .audioEngineError
@@ -240,7 +240,7 @@ final class SpeechRecognizer: NSObject, ObservableObject {
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
         
         onListeningStopped?()
-        Logger.shared.logSpeechRecognition(event: "Stopped listening")
+        Logger.shared.info("Stopped listening")
     }
     
     // MARK: - Cancel
@@ -267,7 +267,7 @@ final class SpeechRecognizer: NSObject, ObservableObject {
         
         if !finalText.isEmpty {
             onTranscriptionComplete?(finalText)
-            Logger.shared.logSpeechRecognition(event: "Transcription complete: \(finalText.prefix(50))...")
+            Logger.shared.info("Transcription complete: \(finalText.prefix(50))...")
         }
     }
     
@@ -347,6 +347,6 @@ extension SpeechRecognizer: SFSpeechRecognizerDelegate {
                 self.stopListening()
             }
         }
-        Logger.shared.logSpeechRecognition(event: "Availability changed: \(available)")
+        Logger.shared.info("Availability changed: \(available)")
     }
 }
