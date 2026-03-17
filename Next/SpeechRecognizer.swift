@@ -49,7 +49,7 @@ final class SpeechRecognizer: NSObject, ObservableObject {
     /// Checks and requests authorization for speech recognition
     func checkAuthorization() {
         // Request microphone permission
-        AVAudioSession.sharedInstance().requestRecordPermission { [weak self] micGranted in
+        AVAudioApplication.requestRecordPermissionWithCompletionHandler { [weak self] micGranted in
             guard micGranted else {
                 DispatchQueue.main.async {
                     self?.isAuthorized = false

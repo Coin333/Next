@@ -140,18 +140,34 @@ struct SettingsView: View {
                 .foregroundColor(.primary)
             
             VStack(alignment: .leading, spacing: 8) {
-                Text("Next")
-                    .font(.title2)
-                    .fontWeight(.bold)
+                HStack(spacing: 12) {
+                    Text("Next")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    
+                    Text("v3")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 4)
+                        .background(Theme.Colors.accent)
+                        .foregroundColor(.white)
+                        .cornerRadius(6)
+                }
                 
                 Text("Your calm AI companion for getting things done, one step at a time.")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
-                Text("Version 2.0")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .padding(.top, 4)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Version 3.0")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    Text("Powered by Friction Engine & Live Guidance")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+                .padding(.top, 4)
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)

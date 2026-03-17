@@ -242,7 +242,7 @@ final class MainViewModel: ObservableObject {
         
         let greeting: String
         
-        if let goal = currentGoal, let task = currentTask {
+        if let _ = currentGoal, let task = currentTask {
             greeting = "Welcome back! You were working on: \(task.title)"
         } else {
             greeting = "Hi there! I'm Sage. What would you like to accomplish today?"
